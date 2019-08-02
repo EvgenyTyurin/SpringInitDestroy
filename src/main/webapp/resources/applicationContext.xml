@@ -7,11 +7,15 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="musicBean" class="evgenyt.springdemo.ClassicalMusic"
+    <context:component-scan base-package="evgenyt.springdemo" />
+
+<!-- If not to use annotations we can use this xml instructions instead
+    <bean id="classicalMusic" class="evgenyt.springdemo.ClassicalMusic"
           init-method="doMyInit"
           destroy-method="doMyDestroy"
           factory-method="getClassicalMusic"
     />
+-->
 
 </beans>
 
